@@ -1,6 +1,6 @@
 # calculator.py
 import math
-from config import WORK_SHIFTS
+#from config import WORK_SHIFTS
 
 def calculate_equipment(data):
     """
@@ -8,7 +8,7 @@ def calculate_equipment(data):
     Возвращает словарь с результатами расчётов.
     """
     # 1. Производительность линии пельменей
-    P_tlp = data["Q_sut"] / (WORK_SHIFTS * data["t"])
+    P_tlp = data["Q_sut"] / (2 * data["t"])
     
     # 2. Количество пельменных автоматов
     n_pa = math.ceil(P_tlp / data["p_pa"])
